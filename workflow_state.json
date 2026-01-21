@@ -1,0 +1,43 @@
+{
+  "workflow_created": true,
+  "agents": [
+    {
+      "name": "Memo Creation Agent",
+      "agent_id": "6970e37c1d92f5e2dd22a95f",
+      "type": "Independent",
+      "status": "created",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.5,
+      "top_p": 0.95,
+      "trigger": "Generate Memo button on Create Memo Screen",
+      "response_schema_saved": true
+    },
+    {
+      "name": "Memo Review Agent",
+      "agent_id": "6970e3a51d92f5e2dd22a967",
+      "type": "Independent",
+      "status": "created",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "trigger": "Review Memo button on Review Screen",
+      "response_schema_saved": true
+    },
+    {
+      "name": "Memo Evaluation Agent",
+      "agent_id": "6970e3c2d6d0dcaec111826a",
+      "type": "Independent",
+      "status": "created",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5",
+      "temperature": 0.3,
+      "top_p": 1,
+      "trigger": "Evaluate Memo button on Evaluation Screen",
+      "response_schema_saved": true
+    }
+  ],
+  "total_agents": 3,
+  "creation_timestamp": "2026-01-21T00:00:00Z"
+}

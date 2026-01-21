@@ -1,0 +1,114 @@
+{
+  "agent_name": "Memo Review Agent",
+  "agent_id": "6970e3a51d92f5e2dd22a967",
+  "test_message": "Review this investment memo: Executive Summary: Series A investment of $5M for 20% equity in HealthTech SaaS. Investment Thesis: Strong growth metrics and market opportunity. Risks: Competition and customer concentration. Financial Projections: $50M ARR by year 3. Recommendation: Proceed with investment.",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-01-21T14:36:13.172017",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "review": {
+        "completeness": {
+          "score": 55,
+          "missing_elements": [
+            "Detailed company background",
+            "Product/service overview and differentiation",
+            "Go-to-market strategy",
+            "Comprehensive market analysis",
+            "Competitive landscape details",
+            "Management team bios",
+            "Use of funds breakdown",
+            "Exit strategy",
+            "Customer acquisition plan",
+            "Financial model/assumptions"
+          ],
+          "comments": "The memo provides a brief summary but lacks key investment memo sections necessary for a full review. Most notably, company specifics, product details, competitive positioning, financial assumptions, management background, and a clear use of proceeds are omitted."
+        },
+        "accuracy": {
+          "score": 70,
+          "issues_found": [
+            {
+              "issue": "No supporting data or explanation for financial projections",
+              "severity": "high",
+              "location": "Financial Projections"
+            },
+            {
+              "issue": "Lack of validation for growth metrics and market opportunity",
+              "severity": "medium",
+              "location": "Investment Thesis"
+            }
+          ],
+          "comments": "Core claims such as ARR projection and market size are presented without supporting data or underlying assumptions. This limits ability to verify memo accuracy."
+        },
+        "clarity": {
+          "score": 80,
+          "unclear_sections": [
+            "Nature of the HealthTech SaaS product",
+            "Definition of 'strong growth metrics'"
+          ],
+          "comments": "The memo is concise and straightforward, but brevity results in critical information being too high-level or undefined, which could cause confusion."
+        },
+        "logical_consistency": {
+          "score": 65,
+          "inconsistencies": [
+            {
+              "issue": "Financial projections are ambitious but not reconciled with risks (competition and customer concentration) or market context",
+              "impact": "This undermines the credibility of the investment case."
+            }
+          ],
+          "comments": "Ambitious projections are not logically anchored to current financials, risk factors, or the investment thesis. Consistency would be improved by linking risks and market context directly to projected outcomes."
+        },
+        "gaps_and_improvements": [
+          {
+            "area": "Company Overview",
+            "gap": "No background or history of the company provided",
+            "recommendation": "Add a succinct overview of the company's history, mission, and development stage.",
+            "priority": "high"
+          },
+          {
+            "area": "Financial Projections",
+            "gap": "No detail, context, or breakdown for $50M ARR projection",
+            "recommendation": "Provide supporting assumptions and a financial model for the projections.",
+            "priority": "high"
+          },
+          {
+            "area": "Market Analysis",
+            "gap": "Insufficient description of market size, segmentation, and dynamics",
+            "recommendation": "Include detailed market analysis, size, growth rate, and competitive positioning.",
+            "priority": "medium"
+          },
+          {
+            "area": "Use of Proceeds",
+            "gap": "No stated breakdown for how the $5M will be expended",
+            "recommendation": "Detail intended allocation of funds across product, hiring, sales, and operations.",
+            "priority": "medium"
+          },
+          {
+            "area": "Team",
+            "gap": "No information about management or key team members",
+            "recommendation": "Add short bios for relevant team members and their roles.",
+            "priority": "medium"
+          },
+          {
+            "area": "Risks",
+            "gap": "Risks are high-level and mitigation strategies are not mentioned",
+            "recommendation": "Articulate detailed risks and specific mitigation strategies.",
+            "priority": "medium"
+          }
+        ]
+      },
+      "overall_assessment": {
+        "score": 63,
+        "status": "needs_revision",
+        "summary": "The investment memo provides basic information but lacks critical details and substantiation needed for a robust investment decision. More information is required on the company, financials, market, team, and competitive differentiation. Revision and expansion of all key sections are recommended before advancing."
+      }
+    },
+    "metadata": {
+      "agent_name": "Memo Review Agent",
+      "timestamp": "2024-06-25T14:23:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"review\": {\n      \"completeness\": {\n        \"score\": 55,\n        \"missing_elements\": [\n          \"Detailed company background\",\n          \"Product/service overview and differentiation\",\n          \"Go-to-market strategy\",\n          \"Comprehensive market analysis\",\n          \"Competitive landscape details\",\n          \"Management team bios\",\n          \"Use of funds breakdown\",\n          \"Exit strategy\",\n          \"Customer acquisition plan\",\n          \"Financial model/assumptions\"\n        ],\n        \"comments\": \"The memo provides a brief summary but lacks key investment memo sections necessary for a full review. Most notably, company specifics, product details, competitive positioning, financial assumptions, management background, and a clear use of proceeds are omitted.\"\n      },\n      \"accuracy\": {\n        \"score\": 70,\n        \"issues_found\": [\n          {\n            \"issue\": \"No supporting data or explanation for financial projections\",\n            \"severity\": \"high\",\n            \"location\": \"Financial Projections\"\n          },\n          {\n            \"issue\": \"Lack of validation for growth metrics and market opportunity\",\n            \"severity\": \"medium\",\n            \"location\": \"Investment Thesis\"\n          }\n        ],\n        \"comments\": \"Core claims such as ARR projection and market size are presented without supporting data or underlying assumptions. This limits ability to verify memo accuracy.\"\n      },\n      \"clarity\": {\n        \"score\": 80,\n        \"unclear_sections\": [\n          \"Nature of the HealthTech SaaS product\",\n          \"Definition of 'strong growth metrics'\"\n        ],\n        \"comments\": \"The memo is concise and straightforward, but brevity results in critical information being too high-level or undefined, which could cause confusion.\"\n      },\n      \"logical_consistency\": {\n        \"score\": 65,\n        \"inconsistencies\": [\n          {\n            \"issue\": \"Financial projections are ambitious but not reconciled with risks (competition and customer concentration) or market context\",\n            \"impact\": \"This undermines the credibility of the investment case.\"\n          }\n        ],\n        \"comments\": \"Ambitious projections are not logically anchored to current financials, risk factors, or the investment thesis. Consistency would be improved by linking risks and market context directly to projected outcomes.\"\n      },\n      \"gaps_and_improvements\": [\n        {\n          \"area\": \"Company Overview\",\n          \"gap\": \"No background or history of the company provided\",\n          \"recommendation\": \"Add a succinct overview of the company's history, mission, and development stage.\",\n          \"priority\": \"high\"\n        },\n        {\n          \"area\": \"Financial Projections\",\n          \"gap\": \"No detail, context, or breakdown for $50M ARR projection\",\n          \"recommendation\": \"Provide supporting assumptions and a financial model for the projections.\",\n          \"priority\": \"high\"\n        },\n        {\n          \"area\": \"Market Analysis\",\n          \"gap\": \"Insufficient description of market size, segmentation, and dynamics\",\n          \"recommendation\": \"Include detailed market analysis, size, growth rate, and competitive positioning.\",\n          \"priority\": \"medium\"\n        },\n        {\n          \"area\": \"Use of Proceeds\",\n          \"gap\": \"No stated breakdown for how the $5M will be expended\",\n          \"recommendation\": \"Detail intended allocation of funds across product, hiring, sales, and operations.\",\n          \"priority\": \"medium\"\n        },\n        {\n          \"area\": \"Team\",\n          \"gap\": \"No information about management or key team members\",\n          \"recommendation\": \"Add short bios for relevant team members and their roles.\",\n          \"priority\": \"medium\"\n        },\n        {\n          \"area\": \"Risks\",\n          \"gap\": \"Risks are high-level and mitigation strategies are not mentioned\",\n          \"recommendation\": \"Articulate detailed risks and specific mitigation strategies.\",\n          \"priority\": \"medium\"\n        }\n      ]\n    },\n    \"overall_assessment\": {\n      \"score\": 63,\n      \"status\": \"needs_revision\",\n      \"summary\": \"The investment memo provides basic information but lacks critical details and substantiation needed for a robust investment decision. More information is required on the company, financials, market, team, and competitive differentiation. Revision and expansion of all key sections are recommended before advancing.\"\n    }\n  },\n  \"metadata\": {\n    \"agent_name\": \"Memo Review Agent\",\n    \"timestamp\": \"2024-06-25T14:23:00Z\"\n  }\n}"
+}

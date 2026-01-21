@@ -1,0 +1,87 @@
+{
+  "workflow_name": "Investment Memo Manager",
+  "workflow_type": "sequential",
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "Investment Details Input",
+      "nodeCategory": "input",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "memo_creation_agent",
+      "type": "Agent",
+      "label": "Memo Creation Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6970e37c1d92f5e2dd22a95f",
+      "position": {
+        "x": 400,
+        "y": 200
+      }
+    },
+    {
+      "id": "memo_review_agent",
+      "type": "Agent",
+      "label": "Memo Review Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6970e3a51d92f5e2dd22a967",
+      "position": {
+        "x": 700,
+        "y": 200
+      }
+    },
+    {
+      "id": "memo_evaluation_agent",
+      "type": "Agent",
+      "label": "Memo Evaluation Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6970e3c2d6d0dcaec111826a",
+      "position": {
+        "x": 1000,
+        "y": 200
+      }
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Final Output",
+      "nodeCategory": "end",
+      "position": {
+        "x": 1300,
+        "y": 200
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "memo_creation_agent",
+      "label": "Investment Details"
+    },
+    {
+      "source": "memo_creation_agent",
+      "target": "memo_review_agent",
+      "label": "Generated Memo"
+    },
+    {
+      "source": "memo_review_agent",
+      "target": "memo_evaluation_agent",
+      "label": "Review Results"
+    },
+    {
+      "source": "memo_evaluation_agent",
+      "target": "output_node",
+      "label": "Evaluation Results"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-01-21T00:00:00Z",
+    "total_nodes": 5,
+    "total_edges": 4,
+    "total_agents": 3
+  }
+}
